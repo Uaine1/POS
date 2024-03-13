@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    <title>Meet n Eat</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="heading">
+        <h2>Welcome to the canteen! Here are our street foods menu</h2>
+    </div>
+    <div class="menu">
+        <ul>
+            <li>Burger - 60 pesos</li>
+            <li>Fries - 50 pesos</li>
+            <li>Fishbol - 20 pesos</li>
+            <li>Kikiam - 25 pesos</li>
+        </ul><hr>
+    </div>
+    <div class="interactable">
+        <form class="adding_removing">
+            <input type="button" value="Add a food item" onclick="add_order()">
+            <input type="button" value="Remove a food item" onclick="remove_order()">
+            <p class="choice">Choice</p>
+            <select name="menu" id="menu">
+                <option value="Burger">Burger</option>
+                <option value="Fries">Fries</option>
+                <option value="Fishbol">Fishbol</option>
+                <option value="Kikiam">Kikiam</option>
+            </select>
+            
+            <p class="quantity">Quantity</p>
+            <input type="text" id="quantity" name="quantity">
+        </form>
+        <br>
+        <div class="finalize">
+            <input type="button" value="Finalize Order" onclick="finalize_order()">
+        </div>
+        <form class="paying_out">  
+            <hr> 
+            <p>Cash</p>
+            <input type="text" id="cash" name="cash">
+            <input type="button" value="Pay" onclick="pay_out()">
+        </form>
+        <br>
+        <br>
+        <div class="reset">
+            <input type="button" value="Reset" onclick="reset_order()">
+        </div>    
+    </div>
+
+    <a href="index.html"><button class="glow-on-hover" type="button">PRINT RECEIPT</button></a>
+</body>
+    
+</html>
+
